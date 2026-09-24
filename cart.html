@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MyStore - Shopping Cart</title>
+    <!-- FontAwesome Icon Font -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+    <!-- Header & Navigation -->
+    <header class="header">
+        <div class="container">
+            <a href="index.html" class="logo">
+                <i class="fas fa-store"></i>
+                <span>MyStore</span>
+            </a>
+
+            <button class="mobile-toggle" id="mobileToggle" aria-label="Menu">
+                <i class="fas fa-bars"></i>
+            </button>
+
+            <nav class="nav-menu" id="navMenu">
+                <a href="index.html" class="nav-link">Home</a>
+                <a href="products.html" class="nav-link">Products</a>
+                <a href="cart.html" class="nav-link active">Cart</a>
+            </nav>
+
+            <div class="header-actions">
+                <a href="cart.html" class="cart-icon-btn" title="Shopping Cart">
+                    <i class="fas fa-shopping-bag"></i>
+                    <span class="cart-badge" id="cartBadge">0</span>
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Shopping Cart Content -->
+    <main class="container" style="padding-top: 40px; padding-bottom: 70px;">
+        <div class="section-title">
+            <h2>Shopping Cart</h2>
+            <p>Review the items in your cart, update quantities, or proceed to checkout</p>
+        </div>
+
+        <div class="cart-layout" id="cartPageContainer">
+            <!-- Cart items & summary loaded dynamically via JavaScript -->
+        </div>
+    </main>
+
+    <!-- Checkout Modal -->
+    <div class="modal-overlay" id="checkoutModal">
+        <div class="modal-box">
+            <button class="modal-close" onclick="closeCheckoutModal()">
+                <i class="fas fa-times"></i>
+            </button>
+            <h3 style="font-size: 1.4rem; margin-bottom: 20px; font-weight: 800; color: var(--text-main);">Shipping & Checkout Details</h3>
+            
+            <form onsubmit="handleCheckoutSubmit(event)">
+                <div class="form-group">
+                    <label>Full Name</label>
+                    <input type="text" required placeholder="John Doe">
+                </div>
+                <div class="form-group">
+                    <label>Phone Number</label>
+                    <input type="tel" required placeholder="+20 100 123 4567">
+                </div>
+                <div class="form-group">
+                    <label>Shipping Address & City</label>
+                    <input type="text" required placeholder="Cairo, Maadi, Street 9">
+                </div>
+                <div class="form-group">
+                    <label>Payment Method</label>
+                    <select required>
+                        <option value="cod">Cash on Delivery (COD)</option>
+                        <option value="card">Credit / Debit Card</option>
+                        <option value="apple">Apple Pay</option>
+                    </select>
+                </div>
+                <button type="submit" class="checkout-btn" style="border: none; cursor: pointer;">
+                    <i class="fas fa-check-circle"></i> Place Order Now
+                </button>
+            </form>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <h4>About MyStore</h4>
+                    <p>Your premier online shopping destination offering high quality products, unbeatable prices, and lightning-fast delivery.</p>
+                    <div class="social-links">
+                        <a href="#" class="social-icon"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="social-icon"><i class="fab fa-instagram"></i></a>
+                        <a href="#" class="social-icon"><i class="fab fa-facebook-f"></i></a>
+                    </div>
+                </div>
+                <div class="footer-col">
+                    <h4>Quick Links</h4>
+                    <ul class="footer-links">
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="products.html">All Products</a></li>
+                        <li><a href="cart.html">Shopping Cart</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Contact Us</h4>
+                    <p><i class="fas fa-envelope" style="margin-right: 8px;"></i> support@mystore.com</p>
+                    <p style="margin-top: 10px;"><i class="fas fa-phone" style="margin-right: 8px;"></i> +20 100 123 4567</p>
+                    <p style="margin-top: 10px;"><i class="fas fa-map-marker-alt" style="margin-right: 8px;"></i> Cairo, Egypt</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 MyStore. All Rights Reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="js/products-data.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html>

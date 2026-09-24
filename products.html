@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MyStore - Products Catalog</title>
+    <!-- FontAwesome Icon Font -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+    <!-- Header & Navigation -->
+    <header class="header">
+        <div class="container">
+            <a href="index.html" class="logo">
+                <i class="fas fa-store"></i>
+                <span>MyStore</span>
+            </a>
+
+            <button class="mobile-toggle" id="mobileToggle" aria-label="Menu">
+                <i class="fas fa-bars"></i>
+            </button>
+
+            <nav class="nav-menu" id="navMenu">
+                <a href="index.html" class="nav-link">Home</a>
+                <a href="products.html" class="nav-link active">Products</a>
+                <a href="cart.html" class="nav-link">Cart</a>
+            </nav>
+
+            <div class="header-actions">
+                <a href="cart.html" class="cart-icon-btn" title="Shopping Cart">
+                    <i class="fas fa-shopping-bag"></i>
+                    <span class="cart-badge" id="cartBadge">0</span>
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Products Catalog Page -->
+    <main class="container" style="padding-top: 40px; padding-bottom: 70px;">
+        <div class="section-title">
+            <h2>All Products</h2>
+            <p>Explore our wide collection and filter or search to easily find your favorite items</p>
+        </div>
+
+        <!-- Search and Filter Controls -->
+        <div class="shop-controls">
+            <div class="search-box">
+                <i class="fas fa-search"></i>
+                <input type="text" id="searchInput" placeholder="Search product by name or description...">
+            </div>
+
+            <div class="filter-categories">
+                <button class="filter-btn active" data-category="all">All</button>
+                <button class="filter-btn" data-category="electronics">Electronics</button>
+                <button class="filter-btn" data-category="fashion">Fashion & Bags</button>
+                <button class="filter-btn" data-category="accessories">Accessories</button>
+            </div>
+        </div>
+
+        <!-- Products Grid -->
+        <div class="products-grid" id="allProductsGrid">
+            <!-- All products loaded dynamically via JavaScript -->
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <h4>About MyStore</h4>
+                    <p>Your premier online shopping destination offering high quality products, unbeatable prices, and lightning-fast delivery.</p>
+                    <div class="social-links">
+                        <a href="#" class="social-icon"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="social-icon"><i class="fab fa-instagram"></i></a>
+                        <a href="#" class="social-icon"><i class="fab fa-facebook-f"></i></a>
+                    </div>
+                </div>
+                <div class="footer-col">
+                    <h4>Quick Links</h4>
+                    <ul class="footer-links">
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="products.html">All Products</a></li>
+                        <li><a href="cart.html">Shopping Cart</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Contact Us</h4>
+                    <p><i class="fas fa-envelope" style="margin-right: 8px;"></i> support@mystore.com</p>
+                    <p style="margin-top: 10px;"><i class="fas fa-phone" style="margin-right: 8px;"></i> +20 100 123 4567</p>
+                    <p style="margin-top: 10px;"><i class="fas fa-map-marker-alt" style="margin-right: 8px;"></i> Cairo, Egypt</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 MyStore. All Rights Reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="js/products-data.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MyStore - Home</title>
+    <!-- FontAwesome Icon Font -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+    <!-- Header & Navigation -->
+    <header class="header">
+        <div class="container">
+            <a href="index.html" class="logo">
+                <i class="fas fa-store"></i>
+                <span>MyStore</span>
+            </a>
+
+            <button class="mobile-toggle" id="mobileToggle" aria-label="Menu">
+                <i class="fas fa-bars"></i>
+            </button>
+
+            <nav class="nav-menu" id="navMenu">
+                <a href="index.html" class="nav-link active">Home</a>
+                <a href="products.html" class="nav-link">Products</a>
+                <a href="cart.html" class="nav-link">Cart</a>
+            </nav>
+
+            <div class="header-actions">
+                <a href="cart.html" class="cart-icon-btn" title="Shopping Cart">
+                    <i class="fas fa-shopping-bag"></i>
+                    <span class="cart-badge" id="cartBadge">0</span>
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Banner Section -->
+    <section class="hero">
+        <div class="container">
+            <div class="hero-content">
+                <div class="hero-text">
+                    <h1>The Future of Shopping at Your Fingertips</h1>
+                    <p>Discover premium exclusive products with competitive pricing, high quality, and fast delivery to your doorstep.</p>
+                    <a href="products.html" class="btn-primary">
+                        Shop Now <i class="fas fa-arrow-right" style="margin-left: 8px;"></i>
+                    </a>
+                </div>
+                <div class="hero-img">
+                    <img src="https://images.unsplash.com/photo-1483985988355-763728e1935b?w=800&auto=format&fit=crop&q=80" alt="E-Commerce Shopping">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section class="features-section">
+        <div class="container">
+            <div class="features-grid">
+                <div class="feature-box">
+                    <div class="feature-icon">
+                        <i class="fas fa-truck-fast"></i>
+                    </div>
+                    <h3>Fast Shipping</h3>
+                    <p>Free delivery on orders over 500 EGP within 48 hours.</p>
+                </div>
+                <div class="feature-box">
+                    <div class="feature-icon">
+                        <i class="fas fa-shield-halved"></i>
+                    </div>
+                    <h3>100% Secure Payment</h3>
+                    <p>Multiple safe payment methods including Credit Cards and COD.</p>
+                </div>
+                <div class="feature-box">
+                    <div class="feature-icon">
+                        <i class="fas fa-rotate-left"></i>
+                    </div>
+                    <h3>Easy Returns</h3>
+                    <p>Hassle-free 14-day return and exchange policy guaranteed.</p>
+                </div>
+                <div class="feature-box">
+                    <div class="feature-icon">
+                        <i class="fas fa-headset"></i>
+                    </div>
+                    <h3>24/7 Support</h3>
+                    <p>Our dedicated customer care team is always here to assist you.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Featured Products Section -->
+    <section class="container" style="margin-bottom: 70px;">
+        <div class="section-title">
+            <h2>Featured Products</h2>
+            <p>Explore our handpicked top-rated and best-selling items of the week</p>
+        </div>
+
+        <div class="products-grid" id="featuredProductsGrid">
+            <!-- Featured products dynamically injected via JS -->
+        </div>
+
+        <div style="text-align: center;">
+            <a href="products.html" class="btn-primary" style="background: var(--primary-color); color: white;">
+                View All Products <i class="fas fa-arrow-right" style="margin-left: 5px;"></i>
+            </a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <h4>About MyStore</h4>
+                    <p>Your premier online shopping destination offering high quality products, unbeatable prices, and lightning-fast delivery.</p>
+                    <div class="social-links">
+                        <a href="#" class="social-icon"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="social-icon"><i class="fab fa-instagram"></i></a>
+                        <a href="#" class="social-icon"><i class="fab fa-facebook-f"></i></a>
+                    </div>
+                </div>
+                <div class="footer-col">
+                    <h4>Quick Links</h4>
+                    <ul class="footer-links">
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="products.html">All Products</a></li>
+                        <li><a href="cart.html">Shopping Cart</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Contact Us</h4>
+                    <p><i class="fas fa-envelope" style="margin-right: 8px;"></i> support@mystore.com</p>
+                    <p style="margin-top: 10px;"><i class="fas fa-phone" style="margin-right: 8px;"></i> +20 100 123 4567</p>
+                    <p style="margin-top: 10px;"><i class="fas fa-map-marker-alt" style="margin-right: 8px;"></i> Cairo, Egypt</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 MyStore. All Rights Reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="js/products-data.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html>
